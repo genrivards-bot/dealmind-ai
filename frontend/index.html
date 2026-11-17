@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DealMind AI</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#0b1020;color:#edf2ff;font:16px system-ui}
+main{max-width:760px;margin:auto;padding:28px 18px}.card{background:#151d32;border:1px solid #293653;border-radius:18px;padding:20px;margin:16px 0}
+h1{margin-bottom:4px}p{color:#aebbd4;line-height:1.5}textarea{box-sizing:border-box;width:100%;min-height:150px;background:#0d1528;color:white;border:1px solid #394967;border-radius:12px;padding:12px}
+button{background:#7c6cff;color:white;border:0;border-radius:12px;padding:12px 18px;font-weight:700;margin-top:12px}
+small{color:#9baac6}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style></head>
+<body><main>
+<h1>DealMind AI</h1><p>Помощник для обработки B2B-заявок и подготовки коммерческих предложений.</p>
+<div class="card"><b>Демонстрация</b><p>Вставьте текст заявки. Эта локальная демонстрация пока не использует настоящий AI.</p>
+<textarea id="request" placeholder="Например: Кабель ВВГнг 3×2,5 — 100 м&#10;Автомат 16А — 20 шт."></textarea>
+<button onclick="demo()">Обработать демо-заявку</button><pre id="result"></pre></div>
+<small>Прототип. Не загружайте конфиденциальные документы в демонстрационную версию.</small>
+</main><script>
+function demo(){const v=document.getElementById('request').value.trim();document.getElementById('result').textContent=v?('Демо получило текст заявки:\n\n'+v+'\n\nДля реального извлечения товаров потребуется подключить серверный AI.'):'Сначала вставьте текст заявки.'}
+</script></body></html>
